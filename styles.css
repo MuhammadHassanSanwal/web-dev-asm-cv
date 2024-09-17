@@ -1,50 +1,42 @@
-body 
-{
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
-nav 
-{
+nav {
     background: #333;
     color: #fff;
     padding: 10px;
 }
 
-nav ul 
-{
+nav ul {
     list-style: none;
     text-align: center;
     padding: 0;
 }
 
-nav ul li 
-{
+nav ul li {
     display: inline;
     margin: 10px;
 }
 
-nav ul li a 
-{
+nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
 }
 
-section 
-{
+section {
     padding: 20px;
 }
 
-h1, h2, h3 
-{
+h1, h2, h3 {
     color: #333;
 }
 
-.card 
-{
+.card {
     background-color: #f4f4f4;
     padding: 20px;
     margin: 10px 0;
@@ -52,26 +44,29 @@ h1, h2, h3
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.Urdu 
-{
+.Urdu {
     text-align: right;
 }
 
-.feed .card 
-{
+.feed .card {
     margin-bottom: 10px;
 }
 
-@media only screen and (min-width: 600px) 
-{
-    nav ul li 
-    {
+.profile-picture {
+    width: 150px;
+    height: auto;
+    border-radius: 10%;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+@media only screen and (min-width: 600px) {
+    nav ul li {
         display: inline-block;
         margin: 0 20px;
     }
 
-    section 
-    {
+    section {
         max-width: 800px;
         margin: 0 auto;
     }

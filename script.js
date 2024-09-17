@@ -1,7 +1,5 @@
-// script.js
-
-// JavaScript object containing all the profile data
 const profileData = {
+    profilepicture: "me.jpg",
     name: "Muhammad Hassan Naseem Sanwal",
     about: {
         english: "Professional in Flutter and Unity. Experienced in App Development, Game Development, and Web Development.",
@@ -31,7 +29,6 @@ const profileData = {
     awards: ["Best Developer Award, 2023", "Certified Full Stack Developer"]
 };
 
-// Populate the navigation
 const navItems = ["About Me", "Skills", "Projects", "Video", "Social Media Feed", "Education", "Awards"];
 const navList = document.getElementById("navList");
 navItems.forEach(item => {
@@ -43,15 +40,14 @@ navItems.forEach(item => {
     navList.appendChild(li);
 });
 
-// Populate the 'About Me' section
 document.getElementById("about").innerHTML = `
+    <img src="${profileData.profilepicture}" alt="Profile Picture" class="profile-picture">
     <h1>${profileData.name}</h1>
     <p>${profileData.about.english}</p>
     <p class="Urdu">${profileData.about.arabic}</p>
     <p class="Urdu">${profileData.about.urdu}</p>
 `;
 
-// Populate the 'Skills' section
 document.getElementById("skills").innerHTML = `
     <h2>Skills</h2>
     <h3>Soft Skills</h3>
@@ -60,7 +56,6 @@ document.getElementById("skills").innerHTML = `
     <ul>${profileData.skills.hard.map(skill => `<li>${skill}</li>`).join('')}</ul>
 `;
 
-// Populate the 'Projects' section
 document.getElementById("projects").innerHTML = `
     <h2>Projects</h2>
     ${profileData.projects.map(project => `
@@ -71,7 +66,6 @@ document.getElementById("projects").innerHTML = `
     `).join('')}
 `;
 
-// Populate the 'Video' section
 document.getElementById("video").innerHTML = `
     <h2>My Introduction Video</h2>
     <video width="320" height="240" controls>
@@ -80,7 +74,6 @@ document.getElementById("video").innerHTML = `
     </video>
 `;
 
-// Populate the 'Social Media Feed' section
 document.getElementById("social").innerHTML = `
     <h2>Social Media Feed</h2>
     ${profileData.socialMediaFeed.map(feedItem => `
@@ -90,12 +83,10 @@ document.getElementById("social").innerHTML = `
     `).join('')}
 `;
 
-// Populate the 'Education' section
 document.getElementById("education").innerHTML = `
     <h2>Education</h2>
     <ul>${profileData.education.map(edu => `<li>${edu}</li>`).join('')}</ul>`;
 
-// Populate the 'Awards' section
 document.getElementById("awards").innerHTML = 
     `<h2>Awards & Certifications</h2>
     <ul>${profileData.awards.map(award => `<li>${award}</li>`).join('')}</ul>`;
